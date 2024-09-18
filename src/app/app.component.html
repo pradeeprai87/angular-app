@@ -6,3 +6,12 @@
 
 <!-- Class binding dynamically -->
 <button [class.active]="isDisabled" [class.non-active]="!isDisabled">Click me</button>
+<br/>
+<!-- Event Binding -->
+<button (click)="btnClick()">Click Event Bind</button>
+
+<!-- Event Binding filterring on specific key-->
+<input type="text" (keyup.a)="keyUpEventA()">
+
+<!-- Event Binding filterringwith param on specific key-->
+<input type="text" (keyup.enter)="keyUpEventParam(user)" #user id="userId">

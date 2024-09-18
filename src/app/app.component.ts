@@ -13,4 +13,16 @@ import { HeaderComponent } from "./header/header.component";
 export class AppComponent {
   title: string = 'angular-app dynamically';
   isDisabled: boolean = false;
+
+  btnClick() {
+    alert('clicked......');
+  }
+
+  keyUpEventA() {
+    console.log('key up a ....');
+  }
+
+  keyUpEventParam(user:HTMLInputElement) {
+    console.log(user.id);
+  }
 }
