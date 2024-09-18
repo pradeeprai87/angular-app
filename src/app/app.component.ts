@@ -13,6 +13,12 @@ import { HeaderComponent } from "./header/header.component";
 export class AppComponent {
   title: string = 'angular-app dynamically';
   isDisabled: boolean = false;
+  userName: string = 'Pradeep Rai';
+
+  updateUserName(username: HTMLInputElement) {
+    this.userName = username.value;
+    console.log(this.userName);
+  }
 
   btnClick() {
     alert('clicked......');
