@@ -16,5 +16,8 @@
 <!-- Event Binding filterringwith param on specific key-->
 <input type="text" (keyup.enter)="keyUpEventParam(user)" #user id="userId">
 
-<!-- Two way data inding -->
+<!-- Two way data Binding -->
 <input type="text" [value]="userName" id="userName" #username (keyup.enter)="updateUserName(username)">
+
+<!-- Two way data Binding using ngModel -->
+<input type="text" [(ngModel)]="userName" id="userName"> {{ userName }}
