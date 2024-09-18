@@ -3,4 +3,6 @@
 <h2>{{ title }}</h2>
 <app-navbar></app-navbar>
 <app-header></app-header>
-<button [disabled]="isDisabled" >Disabled Button</button>
+
+<!-- Class binding dynamically -->
+<button [class.active]="isDisabled" [class.non-active]="!isDisabled">Click me</button>
