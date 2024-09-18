@@ -11,5 +11,6 @@ import { HeaderComponent } from "./header/header.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-app';
+  title: string = 'angular-app dynamically';
+  isDisabled: boolean = true;
 }
