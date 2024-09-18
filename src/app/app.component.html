@@ -1,4 +1,42 @@
+Header: Section
+<hr/>
+<!-- ===============================Old way:======================================== -->
+<!-- need to import the NgIf in .ts file-->
+<!-- <h2 *ngIf="isLoggedIn else msg">{{ userName }}</h2>
+<ng-template #msg>
+    <h3>
+        h3 tag data inside ng-template
+    </h3>
+</ng-template> -->
+<!-- If directive with number values -->
+<!-- <button (click)="countLoginclick()" *ngIf="loginCount < 3">Log In</button> 
+<h4 *ngIf="loginCount >= 3">Exceeded 3 click, try again!</h4> 
 
-<h1>First App</h1>
-<app-navbar></app-navbar>
-<app-header></app-header>
+<button (click)="countLoginclick()" *ngIf="loginCount < 3">Log In</button> 
+<h4 *ngIf="loginCount >= 3">Exceeded 3 click, try again!</h4>
+-->
+
+
+<!-- ===============================new way:======================================== -->
+<!--  without importing the NgIf module -->
+
+<!-- @if (isLoggedIn) {
+    <h3>{{ userName }}</h3>
+} @else {
+    <h3>Not loggedIn user.....</h3>
+}
+ -->
+ <button (click)="countLoginclick()" *ngIf="loginCount < 3">Log In</button> 
+ <h4 *ngIf="loginCount > 3">Exceeded 3 click, try again!</h4>
+
+
+
+<!-- If directive with number values -->
+<button (click)="countLoginclick()" *ngIf="loginCount < 3">Log In</button> 
+@if(loginCount >= 3) {
+    <h4>Exceeded 3 click, try again!</h4>
+}
+
+
+
+
